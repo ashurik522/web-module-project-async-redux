@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import MemeList from './components/memeList';
+import { connect } from 'react-redux'
+
 
 function App() {
   return (
@@ -8,10 +10,9 @@ function App() {
       <header className='header'>
         <h1>Random Meme Creator!</h1>
       </header>
-      <button className='startBtn'>Get Started</button>
       <MemeList />   
     </div>
   );
 }
 
-export default App;
+export default connect()(App);

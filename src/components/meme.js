@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const Meme = (props) => {
 
@@ -10,4 +11,10 @@ const Meme = (props) => {
     )
 }
 
-export default Meme;
+const mapStateToProps = state => {
+    return{
+        memes: state
+    }
+}
+
+export default connect(mapStateToProps,{})(Meme);

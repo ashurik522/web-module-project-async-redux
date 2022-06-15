@@ -9,6 +9,8 @@ import './index.css';
 
 const store = createStore(reducer, applyMiddleware(thunk))
 
+//console.log(store.getState())
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
