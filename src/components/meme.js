@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 const Meme = (props) => {
     
@@ -7,7 +6,7 @@ const Meme = (props) => {
 
     return(
         <div>
-            Get map working
+            {meme.name}
         </div>
     )
 }

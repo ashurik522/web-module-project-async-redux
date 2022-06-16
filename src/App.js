@@ -7,9 +7,7 @@ import { fetchMemes } from './state/actionCreators';
 
 function App(props) {
 
-  useEffect(()=>{
-    props.fetchMemes()
-  },[]);
+ 
 
   return (
     <div className="App">
@@ -27,4 +25,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps,{fetchMemes})(App);
+export default connect(mapStateToProps,{})(App);
