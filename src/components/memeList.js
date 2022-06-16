@@ -12,7 +12,7 @@ const MemeList = (props) => {
     
     return(
         <div>
-            <div className='meme-container'>
+            <div >
                 {props.memes?.map((elem)=>{
                     return <Meme key={elem.id} meme={elem}/>
                 })}

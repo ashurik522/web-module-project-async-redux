@@ -5,9 +5,11 @@ const Meme = (props) => {
     const {meme} = props;
 
     return(
-        <div>
-            <img src={meme.url}/>
-            {meme.name}
+        <div className='meme-container'>
+            <div className="imgContainer">
+                <img alt= 'meme image' src={meme.url}  />
+            </div>
+            <h2 className="name">{meme.name}</h2>
         </div>
     )
 }
