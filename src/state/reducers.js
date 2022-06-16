@@ -5,7 +5,7 @@ const intialState= []
 const memeReducer = (state = intialState, action) => {
     switch(action.type){
         case FETCH_MEMES:
-            return action.payload
+            return  action.payload
         default:
             return state;
     }
