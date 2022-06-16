@@ -6,11 +6,10 @@ export function fetchMemes(){
     return function(dispatch){
         axios.get('https://api.imgflip.com/get_memes')
             .then(res => {
-                debugger
-                //dispatch({type: FETCH_MEMES, payload: res.data })
+                dispatch({type: FETCH_MEMES, payload: res.data.data })
             })
             .catch(err =>{
-                debugger
+                console.error(err)
             })
     }
 }

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import MemeList from './components/memeList';
 import { connect } from 'react-redux'
+import { fetchMemes } from './state/actionCreators';
 
 
-function App() {
+function App(props) {
+
+  useEffect(()=>{
+    props.fetchMemes()
+  },[]);
+
   return (
     <div className="App">
       <header className='header'>
@@ -15,4 +21,10 @@ function App() {
   );
 }
 
-export default connect()(App);
+const mapStateToProps = state => {
+  return{
+      memes: state
+  }
+}
+
+export default connect(mapStateToProps,{fetchMemes})(App);

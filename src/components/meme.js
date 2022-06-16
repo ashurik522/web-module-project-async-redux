@@ -2,19 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Meme = (props) => {
+    
+    const {meme} = props;
 
     return(
         <div>
-            Image here
-            <img />
+            Get map working
         </div>
     )
 }
 
-const mapStateToProps = state => {
-    return{
-        memes: state
-    }
-}
 
-export default connect(mapStateToProps,{})(Meme);
+export default Meme;

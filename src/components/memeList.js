@@ -3,19 +3,26 @@ import Meme from "./meme";
 import { connect } from "react-redux";
 
 const MemeList = (props) => {
-
+    
+    const { memes } = props
+    console.log(memes)
+    
     return(
         <div>
             <button className='startBtn'>Get Started</button>
-            Meme map here
-            <Meme />
+            <div className='meme-container'>
+                {/* {memes.map((elem)=>{
+                    return <Meme key={elem.id} meme={elem}/>
+                })} */}
+            </div>
         </div>
     )
 }
 
 const mapStateToProps = state => {
+    
     return{
-        memes: state
+        memes: state.memes
     }
 }
 
