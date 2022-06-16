@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import MemeList from './components/memeList';
 import { connect } from 'react-redux'
-import { fetchMemes } from './state/actionCreators';
 
 
-function App(props) {
+
+function App() {
 
  
 
@@ -25,4 +25,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps,{})(App);
+export default App;

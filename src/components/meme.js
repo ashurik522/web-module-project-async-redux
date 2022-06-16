@@ -6,6 +6,7 @@ const Meme = (props) => {
 
     return(
         <div>
+            <img src={meme.url}/>
             {meme.name}
         </div>
     )
